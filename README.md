@@ -67,18 +67,18 @@ D7 = X Y Z
 
 ## PROCEDURE:
 
-1.create module encoder and decoder.
+1.Create module encoder and decoder.
 
 2.Get inputs and outputs for encoders and decoders.
 
-3.perform or operation for encoder and and logic for decoders.
+3.Perform or operation for encoder and logic for decoders.
 
-4.perform RTL LOGIC and get waveform.
+4.Perform RTL LOGIC and get waveform.
 
 ## PROGRAM:
 
 /*
-Program for Endocers and Decoders and verify its truth table in quartus using Verilog programming.
+Program for Encoders and Decoders and verify its truth table in quartus using Verilog programming.
 Developed by: Paarkavy B
 RegisterNumber: 212221230072
 */
@@ -138,4 +138,4 @@ endmodule
 
 ## RESULT:
 
-Thus the program to desing encoder and decoder is completed.
+Thus the program to design encoder and decoder is completed.
