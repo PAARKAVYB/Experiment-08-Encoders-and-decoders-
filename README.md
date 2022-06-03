@@ -1,20 +1,20 @@
 # Experiment 08 Encoders and Decoders 
 
-### AIM:
+## AIM:
 
 To implement 8 to 3 Encoder and 3 to 8 Decoder using verilog and validate its output.
 
-### HARDWARE REQUIRED:
+## HARDWARE REQUIRED:
 
 PC, Cyclone II , USB flasher
 
-### SOFTWARE REQUIRED:
+## SOFTWARE REQUIRED:
 
 Quartus prime
 
-### THEORY:-
+## THEORY:-
 
-## ENCODERS:
+### ENCODERS:
 
 Binary code of N digits can be used to store 2N distinct elements of coded information. This is what encoders and decoders are used for. Encoders convert 2N lines of input into a code of N bits and Decoders decode the N bits into 2N lines.
 
@@ -25,7 +25,7 @@ As an example, let’s consider Octal to Binary encoder. As shown in the followi
 
 ![image](https://user-images.githubusercontent.com/36288975/171543588-bc0746df-a173-4b35-989e-5fb7d385fe8a.png)
 
-## Figure -01 3 to 8 Encoder 
+### Figure -01 3 to 8 Encoder 
 
 Implementation –
 
@@ -36,9 +36,9 @@ Hence, the encoder can be realised with OR gates as follows:
 
 ![image](https://user-images.githubusercontent.com/36288975/171543740-68403b82-aa93-4c98-9343-f32b14885a2e.png)
 
-## Figure -02 3 to 8 Encoder implenentation 
+### Figure -02 3 to 8 Encoder implenentation 
 
-## DECODERS:
+### DECODERS:
 
 A decoder does the opposite job of an encoder. It is a combinational circuit that converts n lines of input into 2n lines of output.
 
@@ -59,13 +59,13 @@ D7 = X Y Z
 
 ![image](https://user-images.githubusercontent.com/36288975/171543978-ee2d0671-2846-40a1-8705-507fd6287a49.png)
 
-## Figure -03 8 to 3 Decoder 
+### Figure -03 8 to 3 Decoder 
 
 ![image](https://user-images.githubusercontent.com/36288975/171543866-5a6eace6-8683-49d7-9c4f-a7cb30ec3035.png)
 
-## Figure -04 8 to 3 Decoder implementation 
+### Figure -04 8 to 3 Decoder implementation 
 
-### PROCEDURE:
+## PROCEDURE:
 
 1.create module encoder and decoder.
 
@@ -75,7 +75,8 @@ D7 = X Y Z
 
 4.perform RTL LOGIC and get waveform.
 
-### PROGRAM:
+## PROGRAM:
+
 /*
 Program for Endocers and Decoders and verify its truth table in quartus using Verilog programming.
 Developed by: Paarkavy B
@@ -84,6 +85,7 @@ RegisterNumber: 212221230072
 
 ## PROGRAM FOR ENCODERS:
 
+```
 module enc(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
 input d0,d1,d2,d3,d4,d5,d6,d7;
 output a,b,c;
@@ -91,6 +93,7 @@ or(a,d4,d5,d6,d7);
 or(b,d2,d3,d6,d7);
 or(c,d1,d3,d5,d7);
 endmodule
+```
 
 ## RTL LOGIC:
 
@@ -106,6 +109,7 @@ endmodule
 
 ## PROGRAM FOR DECODERS:
 
+```
 module enc(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
 input a,b,c;
 output d0,d1,d2,d3,d4,d5,d6,d7;
@@ -118,6 +122,7 @@ assign d5 = (a&~b&c);
 assign d6 = (a&b&~c);
 assign d7 = (a&b&c);
 endmodule 
+```
 
 ## RTL LOGIC:
 
@@ -131,6 +136,6 @@ endmodule
 
 ![output](tt2.png)
 
-### RESULT:
+## RESULT:
 
 Thus the program to desing encoder and decoder is completed.
